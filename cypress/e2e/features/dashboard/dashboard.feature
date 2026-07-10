@@ -27,3 +27,16 @@ Feature: Dashboard
   Scenario: Exibicao do contador regressivo no dashboard
     Given que o usuario realizou login com credenciais validas
     Then o contador regressivo deve estar visivel no dashboard
+
+  @smoke @dashboard-actions
+  Scenario: Exibicao dos botoes de acao rapida no dashboard
+    Given que o usuario realizou login com credenciais validas
+    Then o botao Add Account deve estar visivel no dashboard
+    And o botao Make Payment deve estar visivel no dashboard
+
+  @regression @dashboard-profile
+  Scenario: Exibicao dos itens do menu de perfil
+    Given que o usuario realizou login com credenciais validas
+    When o usuario abre o menu de perfil
+    Then o link Profile Settings deve estar visivel
+    And o link Billing Info deve estar visivel

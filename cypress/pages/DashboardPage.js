@@ -10,6 +10,12 @@ class DashboardPage {
   get dueTodayValue() { return cy.contains('.balance-title', 'Due Today').siblings('.balance-value') }
   get transactionsTable() { return cy.get('.table') }
   get countdownTimer() { return cy.get('#time') }
+  get actionsContainer() { return cy.get('.element-actions') }
+  get addAccountButton() { return cy.contains('.element-actions .btn', 'Add Account') }
+  get makePaymentButton() { return cy.contains('.element-actions .btn', 'Make Payment') }
+  get profileMenuTrigger() { return cy.get('.top-settings') }
+  get profileSettingsLink() { return cy.contains('a', 'Profile Settings') }
+  get billingInfoLink() { return cy.contains('a', 'Billing Info') }
 
   isLoaded() {
     this.currentUrl.should('include', 'app.html')

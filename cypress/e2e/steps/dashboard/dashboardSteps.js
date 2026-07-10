@@ -1,4 +1,4 @@
-import { Given, Then } from '@badeball/cypress-cucumber-preprocessor'
+import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 import dashboardPage from '../../../pages/DashboardPage'
 
 Given('que o usuario realizou login com credenciais validas', () => {
@@ -35,4 +35,24 @@ Then('o badge de notificacoes deve estar visivel no dashboard', () => {
 
 Then('o contador regressivo deve estar visivel no dashboard', () => {
   dashboardPage.countdownTimer.should('be.visible')
+})
+
+Then('o botao Add Account deve estar visivel no dashboard', () => {
+  dashboardPage.addAccountButton.should('be.visible')
+})
+
+Then('o botao Make Payment deve estar visivel no dashboard', () => {
+  dashboardPage.makePaymentButton.should('be.visible')
+})
+
+When('o usuario abre o menu de perfil', () => {
+  dashboardPage.profileMenuTrigger.click()
+})
+
+Then('o link Profile Settings deve estar visivel', () => {
+  dashboardPage.profileSettingsLink.should('be.visible')
+})
+
+Then('o link Billing Info deve estar visivel', () => {
+  dashboardPage.billingInfoLink.should('be.visible')
 })
