@@ -139,6 +139,11 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.1.0] — 2026-07-10
+- Cenário: Exibição dos saldos financeiros (`@smoke`, `@dashboard`, `@dashboard-balances`)
+- Valida Total Balance, Credit Available (`$17,800`) e Due Today (`$180`)
+- `DashboardPage` atualizado com seletores precisos por título de saldo
+
 ### [2.0.0] — 2026-07-10
 - Início dos cenários de `@dashboard`
 - Cenário: Exibição do nome do usuário logado (`@smoke`, `@dashboard`, `@dashboard-user-display-name`)
