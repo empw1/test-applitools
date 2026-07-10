@@ -34,3 +34,12 @@ Feature: Login
     When ele nao preenche nenhum campo
     And clica no botao de entrar
     Then deve ser redirecionado para o dashboard pois o site demo nao valida credenciais
+
+  @regression @login-remember-me
+  Scenario: Login com o checkbox Remember Me marcado
+    Given que o usuario esta na pagina de login
+    When ele marca o checkbox Remember Me
+    And ele preenche o usuario e senha validos
+    And clica no botao de entrar
+    Then deve ser redirecionado para o dashboard
+    And o checkbox Remember Me deve ter sido marcado antes do login
