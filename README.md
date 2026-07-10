@@ -139,6 +139,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.5.0] — 2026-07-10
+- Adiciona verificação `dashboardPage.isLoaded()` no `Given` de login dos cenários de dashboard
+- Garante que todos os cenários de dashboard só prosseguem após confirmar o carregamento da página
+
 ### [2.4.0] — 2026-07-10
 - Adiciona command `cy.loginWithFixture()` que encapsula leitura da fixture e login do usuário válido
 - `dashboardSteps.js` atualizado para usar o novo command, eliminando repetição de bloco fixture + login
