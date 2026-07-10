@@ -139,6 +139,12 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.2.0] — 2026-07-10
+- Cenário: Exibição da tabela de transações no dashboard (`@smoke`, `@dashboard`, `@dashboard-transactions`)
+- Cenário: Exibição do badge de notificações no dashboard (`@regression`, `@dashboard`, `@dashboard-notifications`)
+- Cenário: Exibição do contador regressivo no dashboard (`@regression`, `@dashboard`, `@dashboard-countdown`)
+- Steps implementados usando getters já preparados no `DashboardPage`
+
 ### [2.1.0] — 2026-07-10
 - Cenário: Exibição dos saldos financeiros (`@smoke`, `@dashboard`, `@dashboard-balances`)
 - Valida Total Balance, Credit Available (`$17,800`) e Due Today (`$180`)
