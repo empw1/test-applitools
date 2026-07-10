@@ -139,6 +139,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.7.0] — 2026-07-10
+- Habilita gravação de vídeo (`video: true`) no `cypress.config.js`
+- Upload de vídeos como artefato no CI em caso de falha (retidos por 7 dias)
+
 ### [2.6.0] — 2026-07-10
 - Cenário: Exibição dos botões de ação rápida no dashboard (`@smoke`, `@dashboard`, `@dashboard-actions`)
 - Cenário: Exibição dos itens do menu de perfil (`@regression`, `@dashboard`, `@dashboard-profile`)
