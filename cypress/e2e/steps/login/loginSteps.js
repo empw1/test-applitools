@@ -27,6 +27,11 @@ When('ele preenche um usuario valido e uma senha invalida', () => {
   })
 })
 
+When('ele nao preenche nenhum campo', () => {
+  loginPage.usernameInput.should('be.empty')
+  loginPage.passwordInput.should('be.empty')
+})
+
 When('clica no botao de entrar', () => {
   loginPage.clickSignIn()
 })

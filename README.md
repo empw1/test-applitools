@@ -137,6 +137,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [1.5.0] — 2026-07-10
+- Cenário: Login com campos em branco (`@regression`, `@login`, `@login-empty-fields`)
+- Confirma que os inputs não possuem validação `required` e o botão é um link direto para `/app.html`
+
 ### [1.4.0] — 2026-07-10
 - Cenário: Login com senha inválida (`@regression`, `@login`, `@login-invalid-password`)
 - Documenta comportamento do site demo: qualquer credencial redireciona para o dashboard
