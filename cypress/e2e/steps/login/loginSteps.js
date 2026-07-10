@@ -13,10 +13,21 @@ When('ele preenche o usuario e senha validos', () => {
   })
 })
 
+When('ele preenche um usuario invalido e qualquer senha', () => {
+  cy.fixture('users').then((users) => {
+    loginPage.fillUsername(users.invalidUser.username)
+    loginPage.fillPassword(users.invalidUser.password)
+  })
+})
+
 And('clica no botao de entrar', () => {
   loginPage.clickSignIn()
 })
 
 Then('deve ser redirecionado para o dashboard', () => {
+  dashboardPage.isLoaded()
+})
+
+Then('deve ser redirecionado para o dashboard pois o site demo nao valida credenciais', () => {
   dashboardPage.isLoaded()
 })

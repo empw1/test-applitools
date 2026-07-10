@@ -114,6 +114,10 @@ Cada cenário possui tags para permitir execução seletiva:
 
 ## Changelog
 
+### [1.2.0] — 2026-07-10
+- Cenário: Login com usuário inválido (`@regression`, `@login`, `@login-invalid-user`)
+- Documenta comportamento do site demo: qualquer credencial redireciona para o dashboard
+
 ### [1.1.0] — 2026-07-10
 - Cenário: Login com credenciais válidas (`@smoke`, `@login`, `@login-valid-credentials`)
 - Feature file: `cypress/e2e/features/login/login.feature`
