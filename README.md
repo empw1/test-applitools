@@ -139,6 +139,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.4.0] — 2026-07-10
+- Adiciona command `cy.loginWithFixture()` que encapsula leitura da fixture e login do usuário válido
+- `dashboardSteps.js` atualizado para usar o novo command, eliminando repetição de bloco fixture + login
+
 ### [2.3.0] — 2026-07-10
 - Corrige `cy.login()` para delegar ao `LoginPage` em vez de duplicar seletores
 - Elimina inconsistência entre o command e o Page Object
