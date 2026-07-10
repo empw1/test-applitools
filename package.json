@@ -1,0 +1,30 @@
+{
+  "name": "test-applitools",
+  "version": "1.0.0",
+  "description": "Projeto de automacao de testes E2E com Cypress, Cucumber/Gherkin e Page Objects para o site demo.applitools.com",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:smoke": "cypress run --env tags=@smoke",
+    "cy:run:regression": "cypress run --env tags=@regression",
+    "cy:run:login": "cypress run --env tags=@login",
+    "lint": "eslint cypress/**/*.js",
+    "lint:fix": "eslint cypress/**/*.js --fix"
+  },
+  "keywords": ["cypress", "automation", "e2e", "gherkin", "cucumber"],
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/steps/**/*.js"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^26.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "@eslint/js": "^10.0.1",
+    "cypress": "^15.18.1",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.6.0",
+    "eslint-plugin-cypress": "^6.4.2"
+  }
+}
