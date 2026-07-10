@@ -112,7 +112,36 @@ Cada cenário possui tags para permitir execução seletiva:
 
 ---
 
+## CI/CD
+
+O projeto utiliza **GitHub Actions** para execução automática dos testes regressivos.
+
+### Workflow: Regression Tests
+
+**Arquivo:** `.github/workflows/regression.yml`
+
+| Gatilho | Descrição |
+|---|---|
+| `push` na `main` | Executa após todo merge aprovado |
+| `pull_request` para `main` | Executa na abertura e atualização de PRs |
+| `workflow_dispatch` | Execução manual pelo GitHub |
+
+**O que o workflow faz:**
+1. Faz checkout do repositório
+2. Configura Node.js 20 com cache de dependências
+3. Instala as dependências com `npm ci`
+4. Executa os testes com tag `@regression`
+5. Em caso de falha, faz upload dos screenshots como artefato (retidos por 7 dias)
+
+---
+
 ## Changelog
+
+### [1.3.0] — 2026-07-10
+- Esteira CI/CD configurada com GitHub Actions
+- Workflow `regression.yml`: executa testes `@regression` em push e PR para `main`
+- Upload automático de screenshots em caso de falha
+- Seção CI/CD adicionada ao README
 
 ### [1.2.0] — 2026-07-10
 - Cenário: Login com usuário inválido (`@regression`, `@login`, `@login-invalid-user`)
