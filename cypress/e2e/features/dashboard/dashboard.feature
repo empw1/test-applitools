@@ -35,8 +35,7 @@ Feature: Dashboard
     And o botao Make Payment deve estar visivel no dashboard
 
   @regression @dashboard-profile
-  Scenario: Exibicao dos itens do menu de perfil
+  Scenario: Presenca dos itens do menu de perfil no DOM
     Given que o usuario realizou login com credenciais validas
-    When o usuario abre o menu de perfil
     Then o link Profile Settings deve estar visivel
     And o link Billing Info deve estar visivel
