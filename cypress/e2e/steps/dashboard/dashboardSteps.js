@@ -25,3 +25,15 @@ Then('o saldo Due Today deve estar visivel com seu valor', () => {
   dashboardPage.dueTodayTitle.should('be.visible')
   dashboardPage.dueTodayValue.should('be.visible').and('contain.text', '$180')
 })
+
+Then('a tabela de transacoes deve estar visivel no dashboard', () => {
+  dashboardPage.transactionsTable.should('be.visible')
+})
+
+Then('o badge de notificacoes deve estar visivel no dashboard', () => {
+  dashboardPage.notificationBadge.should('be.visible')
+})
+
+Then('o contador regressivo deve estar visivel no dashboard', () => {
+  dashboardPage.countdownTimer.should('be.visible')
+})
