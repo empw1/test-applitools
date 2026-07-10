@@ -137,6 +137,9 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [1.9.0] — 2026-07-10
+- Cenário: Redirecionamento para `app.html` após login bem-sucedido (`@smoke`, `@login`, `@login-redirect`)
+
 ### [1.8.0] — 2026-07-10
 - Cenário: Login com checkbox "Remember Me" marcado (`@regression`, `@login`, `@login-remember-me`)
 - Corrige seletor do checkbox no `LoginPage` (`.custom-control-input` → `.form-check-input`)
