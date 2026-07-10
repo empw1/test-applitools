@@ -27,7 +27,12 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Executar testes regressivos
+      - name: Executar todos os testes (PR)
+        if: github.event_name == 'pull_request'
+        run: npm run cy:run
+
+      - name: Executar testes regressivos (push na main / manual)
+        if: github.event_name != 'pull_request'
         run: npm run cy:run:regression
 
       - name: Upload de screenshots em caso de falha
