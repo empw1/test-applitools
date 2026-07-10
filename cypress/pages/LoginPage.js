@@ -2,7 +2,7 @@ class LoginPage {
   get usernameInput() { return cy.get('#username') }
   get passwordInput() { return cy.get('#password') }
   get signInButton() { return cy.get('#log-in') }
-  get rememberMeCheckbox() { return cy.get('.custom-control-input') }
+  get rememberMeCheckbox() { return cy.get('.form-check-input') }
   get logo() { return cy.get('.logo-w img') }
 
   visit() {

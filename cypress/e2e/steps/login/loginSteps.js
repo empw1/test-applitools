@@ -32,6 +32,10 @@ When('ele nao preenche nenhum campo', () => {
   loginPage.passwordInput.should('be.empty')
 })
 
+When('ele marca o checkbox Remember Me', () => {
+  loginPage.checkRememberMe()
+})
+
 When('clica no botao de entrar', () => {
   loginPage.clickSignIn()
 })
@@ -42,4 +46,9 @@ Then('deve ser redirecionado para o dashboard', () => {
 
 Then('deve ser redirecionado para o dashboard pois o site demo nao valida credenciais', () => {
   dashboardPage.isLoaded()
+})
+
+Then('o checkbox Remember Me deve ter sido marcado antes do login', () => {
+  cy.go('back')
+  loginPage.rememberMeCheckbox.should('exist')
 })

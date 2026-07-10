@@ -137,6 +137,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [1.8.0] — 2026-07-10
+- Cenário: Login com checkbox "Remember Me" marcado (`@regression`, `@login`, `@login-remember-me`)
+- Corrige seletor do checkbox no `LoginPage` (`.custom-control-input` → `.form-check-input`)
+
 ### [1.7.0] — 2026-07-10
 - Issues de bug abertas no GitHub para cenários com validação ausente na aplicação demo
   - [#8](https://github.com/empw1/test-applitools/issues/8) — Login com usuário inválido não exibe erro
