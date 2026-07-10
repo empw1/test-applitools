@@ -20,6 +20,13 @@ When('ele preenche um usuario invalido e qualquer senha', () => {
   })
 })
 
+When('ele preenche um usuario valido e uma senha invalida', () => {
+  cy.fixture('users').then((users) => {
+    loginPage.fillUsername(users.validUser.username)
+    loginPage.fillPassword(users.invalidUser.password)
+  })
+})
+
 When('clica no botao de entrar', () => {
   loginPage.clickSignIn()
 })
