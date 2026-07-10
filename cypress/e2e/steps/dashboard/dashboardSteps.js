@@ -3,6 +3,7 @@ import dashboardPage from '../../../pages/DashboardPage'
 
 Given('que o usuario realizou login com credenciais validas', () => {
   cy.loginWithFixture()
+  dashboardPage.isLoaded()
 })
 
 Then('o nome do usuario deve ser exibido corretamente no dashboard', () => {
