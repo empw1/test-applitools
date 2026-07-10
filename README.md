@@ -139,6 +139,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.3.0] — 2026-07-10
+- Corrige `cy.login()` para delegar ao `LoginPage` em vez de duplicar seletores
+- Elimina inconsistência entre o command e o Page Object
+
 ### [2.2.0] — 2026-07-10
 - Cenário: Exibição da tabela de transações no dashboard (`@smoke`, `@dashboard`, `@dashboard-transactions`)
 - Cenário: Exibição do badge de notificações no dashboard (`@regression`, `@dashboard`, `@dashboard-notifications`)
