@@ -22,9 +22,11 @@ Projeto de automação de testes end-to-end para o site [demo.applitools.com](ht
 cypress/
 ├── e2e/
 │   ├── features/       # Arquivos .feature (Gherkin) organizados por funcionalidade
-│   │   └── login/
+│   │   ├── login/
+│   │   └── dashboard/
 │   └── steps/          # Step definitions organizadas por funcionalidade
-│       └── login/
+│       ├── login/
+│       └── dashboard/
 ├── fixtures/           # Dados de teste (JSON)
 ├── pages/              # Page Objects
 └── support/
@@ -136,6 +138,13 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 ---
 
 ## Changelog
+
+### [2.0.0] — 2026-07-10
+- Início dos cenários de `@dashboard`
+- Cenário: Exibição do nome do usuário logado (`@smoke`, `@dashboard`, `@dashboard-user-display-name`)
+- Criação da feature `cypress/e2e/features/dashboard/dashboard.feature`
+- Criação das steps `cypress/e2e/steps/dashboard/dashboardSteps.js`
+- Estrutura de pastas atualizada no README
 
 ### [1.9.0] — 2026-07-10
 - Cenário: Redirecionamento para `app.html` após login bem-sucedido (`@smoke`, `@login`, `@login-redirect`)
