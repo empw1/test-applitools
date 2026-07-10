@@ -120,22 +120,26 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 **Arquivo:** `.github/workflows/regression.yml`
 
-| Gatilho | Descrição |
+| Gatilho | Testes executados |
 |---|---|
-| `push` na `main` | Executa após todo merge aprovado |
-| `pull_request` para `main` | Executa na abertura e atualização de PRs |
-| `workflow_dispatch` | Execução manual pelo GitHub |
+| `pull_request` para `main` | Todos os testes (`cy:run`) — cobertura total incluindo o novo cenário |
+| `push` na `main` | Apenas `@regression` |
+| `workflow_dispatch` | Apenas `@regression` |
 
 **O que o workflow faz:**
 1. Faz checkout do repositório
 2. Configura Node.js 20 com cache de dependências
 3. Instala as dependências com `npm ci`
-4. Executa os testes com tag `@regression`
+4. Em PRs: executa todos os testes; em push/manual: executa apenas `@regression`
 5. Em caso de falha, faz upload dos screenshots como artefato (retidos por 7 dias)
 
 ---
 
 ## Changelog
+
+### [1.6.0] — 2026-07-10
+- CI/CD ajustado: PRs agora executam todos os testes (`cy:run`) incluindo o novo cenário
+- Push na `main` e execução manual mantêm apenas `@regression`
 
 ### [1.5.0] — 2026-07-10
 - Cenário: Login com campos em branco (`@regression`, `@login`, `@login-empty-fields`)
