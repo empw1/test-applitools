@@ -52,3 +52,7 @@ Then('o checkbox Remember Me deve ter sido marcado antes do login', () => {
   cy.go('back')
   loginPage.rememberMeCheckbox.should('exist')
 })
+
+Then('a URL deve conter app.html', () => {
+  cy.url().should('include', 'app.html')
+})

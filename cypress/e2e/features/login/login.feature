@@ -43,3 +43,10 @@ Feature: Login
     And clica no botao de entrar
     Then deve ser redirecionado para o dashboard
     And o checkbox Remember Me deve ter sido marcado antes do login
+
+  @smoke @login-redirect
+  Scenario: Redirecionamento para app.html apos login bem-sucedido
+    Given que o usuario esta na pagina de login
+    When ele preenche o usuario e senha validos
+    And clica no botao de entrar
+    Then a URL deve conter app.html
