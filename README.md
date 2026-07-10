@@ -114,6 +114,11 @@ Cada cenário possui tags para permitir execução seletiva:
 
 ## Changelog
 
+### [1.1.0] — 2026-07-10
+- Cenário: Login com credenciais válidas (`@smoke`, `@login`, `@login-valid-credentials`)
+- Feature file: `cypress/e2e/features/login/login.feature`
+- Step definitions: `cypress/e2e/steps/login/loginSteps.js`
+
 ### [1.0.0] — 2026-07-10
 - Estrutura base do projeto criada
 - Cypress configurado com Cucumber/Gherkin

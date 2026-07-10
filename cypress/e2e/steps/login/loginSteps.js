@@ -1,0 +1,22 @@
+import { Given, When, And, Then } from '@badeball/cypress-cucumber-preprocessor'
+import loginPage from '../../../pages/LoginPage'
+import dashboardPage from '../../../pages/DashboardPage'
+
+Given('que o usuario esta na pagina de login', () => {
+  loginPage.visit()
+})
+
+When('ele preenche o usuario e senha validos', () => {
+  cy.fixture('users').then((users) => {
+    loginPage.fillUsername(users.validUser.username)
+    loginPage.fillPassword(users.validUser.password)
+  })
+})
+
+And('clica no botao de entrar', () => {
+  loginPage.clickSignIn()
+})
+
+Then('deve ser redirecionado para o dashboard', () => {
+  dashboardPage.isLoaded()
+})
