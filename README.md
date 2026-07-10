@@ -137,6 +137,13 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [1.7.0] — 2026-07-10
+- Issues de bug abertas no GitHub para cenários com validação ausente na aplicação demo
+  - [#8](https://github.com/empw1/test-applitools/issues/8) — Login com usuário inválido não exibe erro
+  - [#9](https://github.com/empw1/test-applitools/issues/9) — Login com senha inválida não exibe erro
+  - [#10](https://github.com/empw1/test-applitools/issues/10) — Login com campos em branco não exibe validação
+- Referências às issues adicionadas nos comentários dos cenários no feature file
+
 ### [1.6.0] — 2026-07-10
 - CI/CD ajustado: PRs agora executam todos os testes (`cy:run`) incluindo o novo cenário
 - Push na `main` e execução manual mantêm apenas `@regression`
