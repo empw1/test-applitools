@@ -1,4 +1,4 @@
-import { Given, When, And, Then } from '@badeball/cypress-cucumber-preprocessor'
+import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 import loginPage from '../../../pages/LoginPage'
 import dashboardPage from '../../../pages/DashboardPage'
 
@@ -20,7 +20,7 @@ When('ele preenche um usuario invalido e qualquer senha', () => {
   })
 })
 
-And('clica no botao de entrar', () => {
+When('clica no botao de entrar', () => {
   loginPage.clickSignIn()
 })
 
