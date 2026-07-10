@@ -14,3 +14,10 @@ Feature: Login
     When ele preenche um usuario invalido e qualquer senha
     And clica no botao de entrar
     Then deve ser redirecionado para o dashboard pois o site demo nao valida credenciais
+
+  @regression @login-invalid-password
+  Scenario: Login com senha invalida
+    Given que o usuario esta na pagina de login
+    When ele preenche um usuario valido e uma senha invalida
+    And clica no botao de entrar
+    Then deve ser redirecionado para o dashboard pois o site demo nao valida credenciais

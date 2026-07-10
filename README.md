@@ -137,6 +137,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [1.4.0] — 2026-07-10
+- Cenário: Login com senha inválida (`@regression`, `@login`, `@login-invalid-password`)
+- Documenta comportamento do site demo: qualquer credencial redireciona para o dashboard
+
 ### [1.3.0] — 2026-07-10
 - Esteira CI/CD configurada com GitHub Actions
 - Workflow `regression.yml`: executa testes `@regression` em push e PR para `main`
