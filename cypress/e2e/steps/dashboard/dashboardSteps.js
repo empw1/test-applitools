@@ -36,3 +36,19 @@ Then('o badge de notificacoes deve estar visivel no dashboard', () => {
 Then('o contador regressivo deve estar visivel no dashboard', () => {
   dashboardPage.countdownTimer.should('be.visible')
 })
+
+Then('o botao Add Account deve estar visivel no dashboard', () => {
+  dashboardPage.addAccountButton.should('be.visible')
+})
+
+Then('o botao Make Payment deve estar visivel no dashboard', () => {
+  dashboardPage.makePaymentButton.should('be.visible')
+})
+
+Then('o link Profile Settings deve estar visivel', () => {
+  dashboardPage.profileSettingsLink.should('exist')
+})
+
+Then('o link Billing Info deve estar visivel', () => {
+  dashboardPage.billingInfoLink.should('exist')
+})

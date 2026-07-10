@@ -139,6 +139,11 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.6.0] — 2026-07-10
+- Cenário: Exibição dos botões de ação rápida no dashboard (`@smoke`, `@dashboard`, `@dashboard-actions`)
+- Cenário: Exibição dos itens do menu de perfil (`@regression`, `@dashboard`, `@dashboard-profile`)
+- `DashboardPage` atualizado com seletores de ações e menu de perfil
+
 ### [2.5.0] — 2026-07-10
 - Adiciona verificação `dashboardPage.isLoaded()` no `Given` de login dos cenários de dashboard
 - Garante que todos os cenários de dashboard só prosseguem após confirmar o carregamento da página
