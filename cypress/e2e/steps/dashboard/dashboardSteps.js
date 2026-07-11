@@ -1,7 +1,7 @@
-import { Given, Then } from '@badeball/cypress-cucumber-preprocessor'
+import { Before, Then } from '@badeball/cypress-cucumber-preprocessor'
 import dashboardPage from '../../../pages/DashboardPage'
 
-Given('que o usuario realizou login com credenciais validas', () => {
+Before({ tags: '@dashboard' }, () => {
   cy.loginWithFixture()
   dashboardPage.isLoaded()
 })

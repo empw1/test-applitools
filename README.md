@@ -139,6 +139,11 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.9.0] — 2026-07-10
+- Substitui o `Given` de login por hook `Before` escopado em `@dashboard`
+- `Given que o usuario realizou login` removido de todos os cenários do dashboard
+- Login centralizado — novos cenários de dashboard não precisam mais declarar o passo de login
+
 ### [2.8.0] — 2026-07-10
 - Expande cenário `@dashboard-transactions` com validação das colunas do cabeçalho e presença de linhas no tbody
 - `DashboardPage` atualizado com getters `transactionsTableHeader` e `transactionsTableRows`
