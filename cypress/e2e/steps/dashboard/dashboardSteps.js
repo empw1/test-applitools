@@ -29,6 +29,17 @@ Then('a tabela de transacoes deve estar visivel no dashboard', () => {
   dashboardPage.transactionsTable.should('be.visible')
 })
 
+Then('a tabela deve conter as colunas Status Date Description Category e Amount', () => {
+  const colunas = ['Status', 'Date', 'Description', 'Category', 'Amount']
+  colunas.forEach((coluna) => {
+    dashboardPage.transactionsTableHeader.contains(coluna).should('exist')
+  })
+})
+
+Then('a tabela deve exibir pelo menos uma linha de transacao', () => {
+  dashboardPage.transactionsTableRows.should('have.length.at.least', 1)
+})
+
 Then('o badge de notificacoes deve estar visivel no dashboard', () => {
   dashboardPage.notificationBadge.should('be.visible')
 })
