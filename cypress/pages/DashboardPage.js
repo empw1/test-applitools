@@ -8,7 +8,9 @@ class DashboardPage {
   get creditAvailableValue() { return cy.contains('.balance-title', 'Credit Available').siblings('.balance-value') }
   get dueTodayTitle() { return cy.contains('.balance-title', 'Due Today') }
   get dueTodayValue() { return cy.contains('.balance-title', 'Due Today').siblings('.balance-value') }
-  get transactionsTable() { return cy.get('.table') }
+  get transactionsTable() { return cy.get('table.table-padded') }
+  get transactionsTableHeader() { return cy.get('table.table-padded thead tr th') }
+  get transactionsTableRows() { return cy.get('table.table-padded tbody tr') }
   get countdownTimer() { return cy.get('#time') }
   get actionsContainer() { return cy.get('.element-actions') }
   get addAccountButton() { return cy.contains('.element-actions .btn', 'Add Account') }

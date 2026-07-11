@@ -17,6 +17,8 @@ Feature: Dashboard
   Scenario: Exibicao da tabela de transacoes no dashboard
     Given que o usuario realizou login com credenciais validas
     Then a tabela de transacoes deve estar visivel no dashboard
+    And a tabela deve conter as colunas Status Date Description Category e Amount
+    And a tabela deve exibir pelo menos uma linha de transacao
 
   @regression @dashboard-notifications
   Scenario: Exibicao do badge de notificacoes no dashboard

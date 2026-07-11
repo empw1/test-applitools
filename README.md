@@ -139,6 +139,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [2.8.0] — 2026-07-10
+- Expande cenário `@dashboard-transactions` com validação das colunas do cabeçalho e presença de linhas no tbody
+- `DashboardPage` atualizado com getters `transactionsTableHeader` e `transactionsTableRows`
+
 ### [2.7.0] — 2026-07-10
 - Habilita gravação de vídeo (`video: true`) no `cypress.config.js`
 - Upload de vídeos como artefato no CI em caso de falha (retidos por 7 dias)
