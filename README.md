@@ -139,6 +139,13 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+### [3.0.0] — 2026-07-10
+- Inicia a feature `@search` com dois cenários de busca
+- Cenário: Exibição do campo de busca no dashboard (`@smoke`, `@search`, `@search-field`)
+- Cenário: Presença dos grupos de sugestões de busca no DOM (`@regression`, `@search`, `@search-suggestions`)
+- Criação do `SearchPage` com seletores do componente de busca
+- Criação de `cypress/e2e/features/dashboard/search.feature` e `cypress/e2e/steps/dashboard/searchSteps.js`
+
 ### [2.9.0] — 2026-07-10
 - Substitui o `Given` de login por hook `Before` escopado em `@dashboard`
 - `Given que o usuario realizou login` removido de todos os cenários do dashboard
