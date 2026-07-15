@@ -139,9 +139,10 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ## Changelog
 
+O histórico completo de versões está disponível nas [Releases do GitHub](https://github.com/empw1/test-applitools/releases).
+
 ### [2.9.0] — 2026-07-10
 - Substitui o `Given` de login por hook `Before` escopado em `@dashboard`
-- `Given que o usuario realizou login` removido de todos os cenários do dashboard
 - Login centralizado — novos cenários de dashboard não precisam mais declarar o passo de login
 
 ### [2.8.0] — 2026-07-10
@@ -150,89 +151,4 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ### [2.7.0] — 2026-07-10
 - Habilita gravação de vídeo (`video: true`) no `cypress.config.js`
-- Upload de vídeos como artefato no CI em caso de falha (retidos por 7 dias)
-
-### [2.6.0] — 2026-07-10
-- Cenário: Exibição dos botões de ação rápida no dashboard (`@smoke`, `@dashboard`, `@dashboard-actions`)
-- Cenário: Exibição dos itens do menu de perfil (`@regression`, `@dashboard`, `@dashboard-profile`)
-- `DashboardPage` atualizado com seletores de ações e menu de perfil
-
-### [2.5.0] — 2026-07-10
-- Adiciona verificação `dashboardPage.isLoaded()` no `Given` de login dos cenários de dashboard
-- Garante que todos os cenários de dashboard só prosseguem após confirmar o carregamento da página
-
-### [2.4.0] — 2026-07-10
-- Adiciona command `cy.loginWithFixture()` que encapsula leitura da fixture e login do usuário válido
-- `dashboardSteps.js` atualizado para usar o novo command, eliminando repetição de bloco fixture + login
-
-### [2.3.0] — 2026-07-10
-- Corrige `cy.login()` para delegar ao `LoginPage` em vez de duplicar seletores
-- Elimina inconsistência entre o command e o Page Object
-
-### [2.2.0] — 2026-07-10
-- Cenário: Exibição da tabela de transações no dashboard (`@smoke`, `@dashboard`, `@dashboard-transactions`)
-- Cenário: Exibição do badge de notificações no dashboard (`@regression`, `@dashboard`, `@dashboard-notifications`)
-- Cenário: Exibição do contador regressivo no dashboard (`@regression`, `@dashboard`, `@dashboard-countdown`)
-- Steps implementados usando getters já preparados no `DashboardPage`
-
-### [2.1.0] — 2026-07-10
-- Cenário: Exibição dos saldos financeiros (`@smoke`, `@dashboard`, `@dashboard-balances`)
-- Valida Total Balance, Credit Available (`$17,800`) e Due Today (`$180`)
-- `DashboardPage` atualizado com seletores precisos por título de saldo
-
-### [2.0.0] — 2026-07-10
-- Início dos cenários de `@dashboard`
-- Cenário: Exibição do nome do usuário logado (`@smoke`, `@dashboard`, `@dashboard-user-display-name`)
-- Criação da feature `cypress/e2e/features/dashboard/dashboard.feature`
-- Criação das steps `cypress/e2e/steps/dashboard/dashboardSteps.js`
-- Estrutura de pastas atualizada no README
-
-### [1.9.0] — 2026-07-10
-- Cenário: Redirecionamento para `app.html` após login bem-sucedido (`@smoke`, `@login`, `@login-redirect`)
-
-### [1.8.0] — 2026-07-10
-- Cenário: Login com checkbox "Remember Me" marcado (`@regression`, `@login`, `@login-remember-me`)
-- Corrige seletor do checkbox no `LoginPage` (`.custom-control-input` → `.form-check-input`)
-
-### [1.7.0] — 2026-07-10
-- Issues de bug abertas no GitHub para cenários com validação ausente na aplicação demo
-  - [#8](https://github.com/empw1/test-applitools/issues/8) — Login com usuário inválido não exibe erro
-  - [#9](https://github.com/empw1/test-applitools/issues/9) — Login com senha inválida não exibe erro
-  - [#10](https://github.com/empw1/test-applitools/issues/10) — Login com campos em branco não exibe validação
-- Referências às issues adicionadas nos comentários dos cenários no feature file
-
-### [1.6.0] — 2026-07-10
-- CI/CD ajustado: PRs agora executam todos os testes (`cy:run`) incluindo o novo cenário
-- Push na `main` e execução manual mantêm apenas `@regression`
-
-### [1.5.0] — 2026-07-10
-- Cenário: Login com campos em branco (`@regression`, `@login`, `@login-empty-fields`)
-- Confirma que os inputs não possuem validação `required` e o botão é um link direto para `/app.html`
-
-### [1.4.0] — 2026-07-10
-- Cenário: Login com senha inválida (`@regression`, `@login`, `@login-invalid-password`)
-- Documenta comportamento do site demo: qualquer credencial redireciona para o dashboard
-
-### [1.3.0] — 2026-07-10
-- Esteira CI/CD configurada com GitHub Actions
-- Workflow `regression.yml`: executa testes `@regression` em push e PR para `main`
-- Upload automático de screenshots em caso de falha
-- Seção CI/CD adicionada ao README
-
-### [1.2.0] — 2026-07-10
-- Cenário: Login com usuário inválido (`@regression`, `@login`, `@login-invalid-user`)
-- Documenta comportamento do site demo: qualquer credencial redireciona para o dashboard
-
-### [1.1.0] — 2026-07-10
-- Cenário: Login com credenciais válidas (`@smoke`, `@login`, `@login-valid-credentials`)
-- Feature file: `cypress/e2e/features/login/login.feature`
-- Step definitions: `cypress/e2e/steps/login/loginSteps.js`
-
-### [1.0.0] — 2026-07-10
-- Estrutura base do projeto criada
-- Cypress configurado com Cucumber/Gherkin
-- ESLint configurado com plugin Cypress
-- Page Objects: `LoginPage`, `DashboardPage`
-- Command personalizado: `cy.login()`
-- Fixtures de usuários criadas
-- README inicial
+- Upload de vídeos como artefato no CI em caso de falha
