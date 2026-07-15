@@ -19,6 +19,9 @@ class DashboardPage {
   get actionsContainer() { return cy.get('.element-actions') }
   get addAccountButton() { return cy.contains('.element-actions .btn', 'Add Account') }
   get makePaymentButton() { return cy.contains('.element-actions .btn', 'Make Payment') }
+  get viewStatementLink() { return cy.contains('.btn-link.btn-underlined', 'View Statement') }
+  get requestIncreaseLink() { return cy.contains('.btn-link.btn-underlined', 'Request Increase') }
+  get payNowLink() { return cy.contains('.btn-gold', 'Pay Now') }
   get profileMenuTrigger() { return cy.get('.top-settings') }
   get profileSettingsLink() { return cy.contains('a', 'Profile Settings') }
   get billingInfoLink() { return cy.contains('a', 'Billing Info') }
