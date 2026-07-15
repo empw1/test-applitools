@@ -137,24 +137,8 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 ---
 
-## Changelog
+## Releases
 
-O histórico completo de versões está disponível nas [Releases do GitHub](https://github.com/empw1/test-applitools/releases).
+O histórico de versões deste projeto é publicado como **GitHub Releases**. Cada entrega gera uma release com tag semântica (`vX.Y.Z`) e notas descrevendo o que foi adicionado ou corrigido.
 
-### [3.0.0] — 2026-07-10
-- Inicia a feature `@search` com dois cenários de busca
-- Cenário: Exibição do campo de busca no dashboard (`@smoke`, `@search`, `@search-field`)
-- Cenário: Presença dos grupos de sugestões de busca no DOM (`@regression`, `@search`, `@search-suggestions`)
-- Criação do `SearchPage` com seletores do componente de busca
-
-### [2.9.0] — 2026-07-10
-- Substitui o `Given` de login por hook `Before` escopado em `@dashboard`
-- Login centralizado — novos cenários de dashboard não precisam mais declarar o passo de login
-
-### [2.8.0] — 2026-07-10
-- Expande cenário `@dashboard-transactions` com validação das colunas do cabeçalho e presença de linhas no tbody
-- `DashboardPage` atualizado com getters `transactionsTableHeader` e `transactionsTableRows`
-
-### [2.7.0] — 2026-07-10
-- Habilita gravação de vídeo (`video: true`) no `cypress.config.js`
-- Upload de vídeos como artefato no CI em caso de falha
+Acesse o histórico completo em: [github.com/empw1/test-applitools/releases](https://github.com/empw1/test-applitools/releases)
