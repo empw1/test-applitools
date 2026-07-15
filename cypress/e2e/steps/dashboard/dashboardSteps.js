@@ -10,6 +10,10 @@ Then('o nome do usuario deve ser exibido corretamente no dashboard', () => {
   dashboardPage.userDisplayName.should('be.visible').and('contain.text', 'Jack Gomez')
 })
 
+Then('o perfil do usuario deve ser exibido como Customer', () => {
+  dashboardPage.userRole.should('be.visible').and('contain.text', 'Customer')
+})
+
 Then('o saldo Total Balance deve estar visivel com seu valor', () => {
   dashboardPage.totalBalanceTitle.should('be.visible')
   dashboardPage.totalBalanceValue.should('be.visible').and('not.be.empty')

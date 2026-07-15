@@ -1,6 +1,7 @@
 class DashboardPage {
   get currentUrl() { return cy.url() }
   get userDisplayName() { return cy.get('.logged-user-name') }
+  get userRole() { return cy.get('.logged-user-role') }
   get notificationBadge() { return cy.get('.badge-danger') }
   get totalBalanceTitle() { return cy.contains('.balance-title', 'Total Balance') }
   get totalBalanceValue() { return cy.contains('.balance-title', 'Total Balance').siblings('.balance-value') }
