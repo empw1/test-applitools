@@ -21,6 +21,12 @@ Feature: Dashboard
     And a tabela deve conter as colunas Status Date Description Category e Amount
     And a tabela deve exibir pelo menos uma linha de transacao
 
+  @regression @dashboard-transaction-status
+  Scenario: Exibicao dos status de transacoes na tabela
+    Then a tabela deve conter transacoes com status Complete
+    And a tabela deve conter transacoes com status Declined
+    And a tabela deve conter transacoes com status Pending
+
   @regression @dashboard-notifications
   Scenario: Exibicao do badge de notificacoes no dashboard
     Then o badge de notificacoes deve estar visivel no dashboard

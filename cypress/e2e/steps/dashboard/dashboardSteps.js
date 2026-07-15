@@ -44,6 +44,18 @@ Then('a tabela deve exibir pelo menos uma linha de transacao', () => {
   dashboardPage.transactionsTableRows.should('have.length.at.least', 1)
 })
 
+Then('a tabela deve conter transacoes com status Complete', () => {
+  dashboardPage.transactionStatusComplete.should('exist')
+})
+
+Then('a tabela deve conter transacoes com status Declined', () => {
+  dashboardPage.transactionStatusDeclined.should('exist')
+})
+
+Then('a tabela deve conter transacoes com status Pending', () => {
+  dashboardPage.transactionStatusPending.should('exist')
+})
+
 Then('o badge de notificacoes deve estar visivel no dashboard', () => {
   dashboardPage.notificationBadge.should('be.visible')
 })

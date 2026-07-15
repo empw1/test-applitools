@@ -12,6 +12,9 @@ class DashboardPage {
   get transactionsTable() { return cy.get('table.table-padded') }
   get transactionsTableHeader() { return cy.get('table.table-padded thead tr th') }
   get transactionsTableRows() { return cy.get('table.table-padded tbody tr') }
+  get transactionStatusComplete() { return cy.get('.status-pill.green') }
+  get transactionStatusDeclined() { return cy.get('.status-pill.red') }
+  get transactionStatusPending() { return cy.get('.status-pill.yellow') }
   get countdownTimer() { return cy.get('#time') }
   get actionsContainer() { return cy.get('.element-actions') }
   get addAccountButton() { return cy.contains('.element-actions .btn', 'Add Account') }
