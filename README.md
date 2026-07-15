@@ -141,6 +141,12 @@ O projeto utiliza **GitHub Actions** para execução automática dos testes regr
 
 O histórico completo de versões está disponível nas [Releases do GitHub](https://github.com/empw1/test-applitools/releases).
 
+### [3.0.0] — 2026-07-10
+- Inicia a feature `@search` com dois cenários de busca
+- Cenário: Exibição do campo de busca no dashboard (`@smoke`, `@search`, `@search-field`)
+- Cenário: Presença dos grupos de sugestões de busca no DOM (`@regression`, `@search`, `@search-suggestions`)
+- Criação do `SearchPage` com seletores do componente de busca
+
 ### [2.9.0] — 2026-07-10
 - Substitui o `Given` de login por hook `Before` escopado em `@dashboard`
 - Login centralizado — novos cenários de dashboard não precisam mais declarar o passo de login
