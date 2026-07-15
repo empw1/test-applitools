@@ -72,6 +72,18 @@ Then('o botao Make Payment deve estar visivel no dashboard', () => {
   dashboardPage.makePaymentButton.should('be.visible')
 })
 
+Then('o link View Statement deve estar visivel no dashboard', () => {
+  dashboardPage.viewStatementLink.should('be.visible')
+})
+
+Then('o link Request Increase deve estar visivel no dashboard', () => {
+  dashboardPage.requestIncreaseLink.should('be.visible')
+})
+
+Then('o link Pay Now deve estar visivel no dashboard', () => {
+  dashboardPage.payNowLink.should('be.visible')
+})
+
 Then('o link Profile Settings deve estar visivel', () => {
   dashboardPage.profileSettingsLink.should('exist')
 })

@@ -40,6 +40,12 @@ Feature: Dashboard
     Then o botao Add Account deve estar visivel no dashboard
     And o botao Make Payment deve estar visivel no dashboard
 
+  @regression @dashboard-balance-actions
+  Scenario: Exibicao dos links de acao dos blocos de saldo
+    Then o link View Statement deve estar visivel no dashboard
+    And o link Request Increase deve estar visivel no dashboard
+    And o link Pay Now deve estar visivel no dashboard
+
   @regression @dashboard-profile
   Scenario: Presenca dos itens do menu de perfil no DOM
     Then o link Profile Settings deve estar visivel
