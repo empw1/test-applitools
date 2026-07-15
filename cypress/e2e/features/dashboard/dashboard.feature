@@ -5,6 +5,10 @@ Feature: Dashboard
   Scenario: Exibicao do nome do usuario logado
     Then o nome do usuario deve ser exibido corretamente no dashboard
 
+  @smoke @dashboard-user-role
+  Scenario: Exibicao do perfil do usuario logado
+    Then o perfil do usuario deve ser exibido como Customer
+
   @smoke @dashboard-balances
   Scenario: Exibicao dos saldos financeiros do usuario
     Then o saldo Total Balance deve estar visivel com seu valor
